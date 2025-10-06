@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     height: 160,
     alignItems: 'center',
     justifyContent: 'center',
+    zIndex: 40,
   },
   img: {
     width: 160,

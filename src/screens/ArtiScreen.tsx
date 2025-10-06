@@ -161,9 +161,7 @@ export default function ArtiScreen() {
               {/* altar row (interactive items) */}
               <View style={styles.altarRow}>
                 <View style={styles.altSide} />
-                <View style={styles.altCenter}>
-                  <ArtiThali src={RITUAL_ITEMS.thali.src} />
-                </View>
+
                 <View style={styles.altSide}>
                   <Prasad src={RITUAL_ITEMS.prasad.src} />
                 </View>
@@ -172,6 +170,9 @@ export default function ArtiScreen() {
           </View>
         </View>
       </AnimatedImageBackground>
+      <View style={styles.thaliFloating}>
+        <ArtiThali src={RITUAL_ITEMS.thali.src} />
+      </View>
     </View>
   );
 }
@@ -203,7 +204,20 @@ const styles = StyleSheet.create({
     ...THEME.shadowDepth.medium,
   },
   deityImage: { width: '100%', height: '100%' },
+  thaliFloating: {
+    position: 'absolute',
+    bottom: '5%',
+    alignSelf: 'center',
+    zIndex: 999,
+    elevation: 999,
+  },
 
+  prasadWrapper: {
+    position: 'absolute',
+    bottom: '10%',
+    right: 50,
+    zIndex: 20,
+  },
   altar: {
     position: 'absolute',
     left: 0,
@@ -270,7 +284,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     justifyContent: 'space-around',
     paddingHorizontal: 18,
-    zIndex: 10,
+    zIndex: 40,
   },
 
   altSide: { width: 96, alignItems: 'center', justifyContent: 'flex-end' },
