@@ -18,18 +18,38 @@ export const THEME = {
     border: '#E5E9F0',
 
     // Saarathi chat colors (explicit)
-    saarathiBg: '#F3F0FF', // soft violet background for AI replies
-    saarathiText: '#3C2A80', // deep Krishna-blue for AI text
-    userBubble: '#E9F6FF', // calm sky blue for user messages
-    userText: '#1B2B40', // dark navy for user text
-    inputBg: '#FFFFFF', // chat input box
+    saarathiBg: '#F3F0FF',
+    saarathiText: '#3C2A80',
+    userBubble: '#E9F6FF',
+    userText: '#1B2B40',
+    inputBg: '#FFFFFF',
 
-    // Additional decorative tokens (explicit so UI changes are visible)
+    // Decorative (general)
     krishnaBlue: '#071A52',
     deepIndigo: '#0B2340',
-    saffron: '#FFB300', // slightly warmer saffron/gold
+    saffron: '#FFB300',
     lightTeal: '#E7FBFF',
     subtleText: '#9FB1D7',
+
+    /* Golden Temple Aarti Palette */
+    templeGold: '#C19A3D', // pillars/ornament
+    templeAmber: '#FFD166', // warm glow
+    templeRed: '#7B2C10', // altar main
+    templeDarkRed: '#3B1206', // deep bottom fade
+    templeShadow: 'rgba(0,0,0,0.25)',
+    templeHighlight: '#FFF4C1',
+    templeBackground: '#FFF8E1',
+    diyaFlame: '#FFB74D',
+    diyaCore: '#FFE082',
+    incenseSmoke: 'rgba(255, 240, 200, 0.14)',
+
+    /* ☆ Carpet / Altar tokens */
+    carpetPrimary: '#5B1F10', // rich maroon base
+    carpetSecondary: '#7B2C10', // warm maroon mid
+    carpetAccent: '#C19A3D', // gold motifs
+    carpetPatternLight: 'rgba(255,255,255,0.04)', // subtle motifs
+    carpetEdge: '#3B1206', // deep edge
+    carpetInset: '#2A0E07', // inner deep shade
   },
 
   space: {
@@ -75,17 +95,16 @@ export const THEME = {
   gradient: {
     primary: ['#6C5CE7', '#A29BFE'],
     divine: ['#6C5CE7', '#F1C40F'],
+    templeCarpet: ['#7B2C10', '#3B1206'],
+    templeGlow: ['#C19A3D', '#FFD166'],
   },
 
-  // Shadow depth presets with cross-platform helpers
   shadowDepth: {
     soft: {
-      // iOS shadow
       shadowColor: 'rgba(0,0,0,0.06)',
       shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.06,
       shadowRadius: 6,
-      // Android elevation
       elevation: 3,
     },
     medium: {
