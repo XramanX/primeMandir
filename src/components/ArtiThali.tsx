@@ -1,20 +1,11 @@
-// src/components/ArtiThali.tsx
-import React, { useRef, useEffect, useState } from 'react';
-import {
-  View,
-  Animated,
-  Image,
-  PanResponder,
-  StyleSheet,
-  Platform,
-} from 'react-native';
-import { THEME } from '../styles/theme';
+import React, { useRef, useState } from 'react';
+import { View, Animated, Image, PanResponder, StyleSheet } from 'react-native';
 
 export default function ArtiThali({ src }: { src: any }) {
   const pan = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current;
 
   const [isDragging, setIsDragging] = useState(false);
-  const lastOffset = useRef({ x: 0, y: 0 }); // track last position manually
+  const lastOffset = useRef({ x: 0, y: 0 });
 
   const panResponder = useRef(
     PanResponder.create({
